@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,12 +14,35 @@
   }
 }
 
+* {
+  font-family: 'Signika', sans-serif;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+/* div.slick-slide */
+
+div.slick-slider.center div.slick-slide {
+  /* margin-inline: 10px; */
+  padding-inline: 20px;
+}
+
+label.MuiInputLabel-root.Mui-focused {
+  color: rgba(30, 205, 247, 1);
+}
+
+p.MuiFormHelperText-root {
+  color: red;
+}
+.error-field {
+  border-color: red !important;
+  border-color: rgba(50, 67, 83, 0.125) !important;
+}
+
+a.active,
+.active {
+  color: rgba(30, 205, 247, 1) !important;
+  font-weight: bold !important;
 }

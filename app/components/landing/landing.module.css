@@ -1,0 +1,9 @@
+.landing {
+  background: linear-gradient(
+    124deg,
+    rgba(87, 106, 123, 1) 0%,
+    rgba(56, 77, 98, 1) 35%,
+    rgba(31, 43, 56, 1) 100%
+  );
+  height: 100vh;
+}
