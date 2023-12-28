@@ -20,7 +20,6 @@ const Computer = ({ model }) => {
 }
 
 const ComputerCanvas = ({ model }) => {
-  if (window.innerWidth < 550) return <></>
   return (
     <Canvas
       shadows
