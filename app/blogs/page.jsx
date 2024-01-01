@@ -1,18 +1,19 @@
 'use client'
 import React from 'react'
-import Navbar from '../components/navbar/navbar'
+import Navbar from '../components/global/navbar'
 import Wrapper from '../components/global/wrapper'
 import { Grid, Typography } from '@mui/material'
-import Footer from '../components/footer/footer'
+import Footer from '../components/global/footer'
 import { GradientText } from '../themes/themes'
-import BlogCard from '../components/cards/blogCard'
+import BlogCard from './components/cards/blogCard'
 import { blogs } from '../constants'
 
 const Blogs = () => {
   const navItems = [
     { route: '/', type: 'navigatable' },
     { route: 'Portfolio', type: 'navigatable' },
-    { route: 'Blogs', type: 'navigatable' }
+    { route: 'Blogs', type: 'navigatable' },
+    { route: 'Configurators', type: 'navigatable' }
   ]
 
   return (
@@ -39,7 +40,7 @@ const Blogs = () => {
 
         <Grid container columns={16} my={2}>
           {blogs.map((blog, i) => (
-            <Grid key={i} item xs={8} sm={4} mb={5} px={3}>
+            <Grid key={i} item xs={16} sm={8} md={4} mb={5} px={3}>
               <BlogCard blog={blog} />
             </Grid>
           ))}

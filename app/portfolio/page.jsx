@@ -1,17 +1,18 @@
 'use client'
 import React from 'react'
-import { Box, Typography } from '@mui/material'
-import Navbar from '../components/navbar/navbar'
-import Footer from '../components/footer/footer'
+import { Box, Typography, useTheme } from '@mui/material'
+import Navbar from '../components/global/navbar'
+import Footer from '../components/global/footer'
 import Wrapper from '../components/global/wrapper'
-import PortfolioCard from '../components/cards/portfolioCard'
+import PortfolioCard from './components/portfolioCard'
 import { portfolios } from '../constants'
 
 const Portfolio = () => {
   const navItems = [
     { route: '/', type: 'navigatable' },
     { route: 'Portfolio', type: 'navigatable' },
-    { route: 'Blogs', type: 'navigatable' }
+    { route: 'Blogs', type: 'navigatable' },
+    { route: 'Configurators', type: 'navigatable' }
   ]
 
   return (
@@ -19,7 +20,7 @@ const Portfolio = () => {
       <Navbar navItems={navItems} />
       <Wrapper sx={{ paddingTop: '150px' }}>
         {portfolios.map((portfolio, i) => (
-          <Box key={i} sx={{ maxHeight: '450px' }}>
+          <Box key={i} sx={{ paddingBottom: '4rem' }}>
             <PortfolioCard portfolio={portfolio} />
           </Box>
         ))}
