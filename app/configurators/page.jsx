@@ -233,6 +233,7 @@ const Configurators = () => {
           </GradientText>
         </Box>
         <Typography sx={{ fontSize: '13px', color: 'rgba(50, 67, 83, 0.6)' }}>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           Let's find out how configurator plays important role in our daily
           sales.
         </Typography>
